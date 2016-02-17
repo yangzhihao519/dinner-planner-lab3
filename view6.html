@@ -16,7 +16,7 @@
   </head>
   <body>
 	<div class="container-fluid">
-		<div class="row">
+		<div class="row" id="prepareDishView">
 			<div class="headersection col-md-12">
 				<h1>HOMELETTE <small style="color: darkgoldenrod;">  From the best chefs in the world directly into your kitchen</small></h1> 
 			</div>
@@ -24,7 +24,7 @@
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<div class="col-md-4">
-							<p class="lead">My Dinner: <span id="numberOfPeople"> 10 </span><span>People</span></p>
+							<p class="lead">My Dinner: <span id="numberOfPeople"></span><span> People</span></p>
 						</div>
 						<div class="col-md-3 col-md-offset-5">
 							<button class="btn btn-primary pull-right">Go Back and Edit Dinner</button>
@@ -37,7 +37,7 @@
 			<div class="col-md-12">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<div id="prepareDishView">
+						<div>
 						<div id="prepareDish">
 						</div>
 						</div>
@@ -54,6 +54,7 @@
     <script src="js/view/selectDishView.js"></script>
     <script src="js/view/oneDishView.js"></script>
     <script src="js/view/prepareDishView.js"></script>
+	<script src="js/view/dinnerOverviewView.js"></script>
   
   </body>  
   </html>

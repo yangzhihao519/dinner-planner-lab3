@@ -20,15 +20,16 @@
 			<div class="headersection col-md-12">
 				<h1>HOMELETTE <small style="color: darkgoldenrod;">  From the best chefs in the world directly into your kitchen</small></h1> 
 			</div>
-			<div class="col-md-3" id="view2">
+			<div class="col-md-3" id="myDinnerView">
 				<p class="lead">My Dinner</p>    
 				<div class="col-md-12" id="guestNumberView">
 					<div class="panel panel-default">
 						<div class="panel-body">
-							<span class="col-md-6">Number of People:<p id="numberOfGuests"></p></span>
+							<span class="col-md-6">Number of People:</span>
 							<span class="col-md-6">
 								<span class="col-md-8">
-									<input type="number" style="width:50px" id="" min="0" max="100">1</input>
+									<!-- <input type="number" style="width:50px" id="numberOfGuests" min="0" max="100"></input> -->
+									<p id="numberOfGuests"></p>
 								</span>
 							</span>
 						</div>
@@ -44,7 +45,7 @@
 								  <th>Cost</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody id="myMenu">
 								<tr>
 								  <td>Pending</td>
 								  <td>0.00</td>
@@ -133,7 +134,10 @@
 	<!-- The application JavaScript code -->
 	<script src="js/app.js"></script>
 	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/guestNumberView.js"></script>
-    <script src="js/view/selectDishView.js"></script>
+	<script src="js/view/myDinnerView.js"></script>
+	<script src="js/view/selectDishView.js"></script>
+    <script src="js/view/oneDishView.js"></script>
+    <script src="js/view/prepareDishView.js"></script>
+	<script src="js/view/dinnerOverviewView.js"></script>
   </body>
 </html>

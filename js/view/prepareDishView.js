@@ -4,15 +4,20 @@ var PrepareDishView = function (container, model) {
 	// Get all the relevant elements of the view (ones that show data
   	// and/or ones that responed to interaction)
 	this.prepareDishes = container.find("#prepareDish");
-			
+	this.numberOfPeople = container.find("#numberOfPeople");
+	
+	this.numberOfPeople.html(model.getNumberOfGuests);
 
-	var dishId = ["1", "101"];
+	// var dishId = ["1", "101"];
+	var dishes = model.getFullMenu();
+	console.log(dishes);
+
 	var prepareDishHtml = "",
 		desp = "Description:"
 	
-	for(i=0; i< dishId.length; i++)
+	for(i=0; i< dishes.length; i++)
 	{
-		var dish = model.getDish(dishId[i]);
+		var dish = dishes[i];
 				
 		prepareDishHtml += "<div class=\"panel panel-default\">"+
 								"<div class=\"panel-body\">"+
