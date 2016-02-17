@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landing Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+		
+  </head>
+  <body class="landingimage">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="header1">
+					<h1>HOMELETTE <small style="color: darkgoldenrod;">  From the best chefs in the world directly into your kitchen</small></h1> 
+				</div>
+				<div id="loadingDiv">
+					<div class="textBox">
+						<h3>A Home Dinner Service</h3>
+						<hr/>
+						<p>some text here, some text here, some text here, some text here, some text here, some text here, some text here, some text here, some text here, some text here, some text here, some text here</p>
+						<br/><br/>
+						<p>start quickly</p>
+						<button type="button" class="btn btn-danger btn-md" onclick="selectDish()"> Create new dinner</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<!-- The application JavaScript code -->
+		
+	<script src="js/view/prepareDishView.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/model/dinnerModel.js"></script>
+	<script src="js/view/guestNumberView.js"></script>
+    <script src="js/view/selectDishView.js"></script>
+	
+  </body>
+</html>
