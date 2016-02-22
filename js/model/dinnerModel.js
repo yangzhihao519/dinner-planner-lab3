@@ -270,7 +270,7 @@ var DinnerModel = function() {
 			},{
 			'name':'small onion, diced',
 			'quantity':0.25,
-			'unit':'',
+			'unit':'g',
 			'price':2
 			},{
 			'name':'garlic salt',

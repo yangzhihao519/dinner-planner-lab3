@@ -14,7 +14,7 @@ var OneDishView = function (container, model) {
     console.log(oneDish.name);
 
 	this.oneDishName.html(oneDish.name);
-	this.oneDishImage.html("<img src=\"images/"+oneDish.image+"\">");
+	this.oneDishImage.html("<a class=\"thumbnail\">"+"<img class=\"img-responsive center-block\" src=\"images/"+oneDish.image+"\">"+"</a>");
 	this.oneDishDescription.html(oneDish.description);
 	this.oneDishNumberOfGuests.html(model.getNumberOfGuests);
 	this.oneDishTotalPrice.html(model.getDishTotalPrice("100"));
@@ -23,23 +23,24 @@ var OneDishView = function (container, model) {
     var oneDishAllIngredientsArray = oneDish.ingredients;
 
 	for (key in oneDishAllIngredientsArray) {
-		oneDishAllIngredientsHtml += "<div class=\"row\">"+ 
-										"<div class=\"col-md-1\">"+
+		oneDishAllIngredientsHtml +="<div class=\"col-md-12 col-sm-12 col-xs-12\">"+
+										"<div class=\"col-md-1 col-sm-1 col-xs-1\">"+
 											oneDishAllIngredientsArray[key].quantity+
 										"</div>"+
-										"<div class=\"col-md-1\">"+
+										"<div class=\"col-md-1 col-sm-1 col-xs-1\">"+
 											oneDishAllIngredientsArray[key].unit+
 										"</div>"+
-										"<div class=\"col-md-8\">"+
+										"<div class=\"col-md-6 col-sm-7 col-xs-6\">"+
 										    oneDishAllIngredientsArray[key].name+
 										"</div>"+
-										"<div class=\"col-md-1\">"+
+										"<div class=\"col-md-1 col-md-offset-2 col-sm-1 col-xs-1\">"+
 											"SEK"+
 									    "</div>"+
-									    "<div class=\"col-md-1\">"+
+									    "<div class=\"col-md-1 col-sm-1 col-xs-1\">"+
 									       oneDishAllIngredientsArray[key].price+
 									    "</div>"+
-									"</div><br/>";
+										"<br/>"+"<br/>"+
+									"</div>";
     }
 	
 	this.oneDishAllIngredients.html(oneDishAllIngredientsHtml);
