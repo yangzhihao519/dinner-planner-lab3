@@ -12,7 +12,7 @@ var SelectDishView = function (container, model) {
 		allDishesHtml += "<div class=\"col-md-4\">"+
 				            "<div class=\"col-md-12 col-xs-8 thumb\">"+
 					            "<a class=\"thumbnail\">"+
-						        	"<img src='images/"+ allDishes[i].image + "'>"+
+						        	"<img class=\"imageheight\" src='images/"+ allDishes[i].image + "'>"+
 					            "</a>"+
 				            "</div>"+
 					        "<div class=\"col-md-12 col-xs-8 thumb\">"+

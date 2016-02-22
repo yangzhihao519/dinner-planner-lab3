@@ -33,3 +33,7 @@
 .parapadding{
 	padding-bottom: 10%;
 }
+
+.imageheight{
+	min-height: 150px;
+}
