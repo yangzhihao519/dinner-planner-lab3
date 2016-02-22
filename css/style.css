@@ -34,6 +34,11 @@
 	padding-bottom: 10%;
 }
 
+.parapadding1{
+	padding-bottom: 3%;
+	border-bottom: 3px solid #999;
+}
+
 .imageheight{
 	min-height: 150px;
 }

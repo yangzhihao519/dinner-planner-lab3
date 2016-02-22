@@ -9,16 +9,16 @@ var SelectDishView = function (container, model) {
 	var allDishesHtml = "";
 
 	for (i = 0; i < allDishes.length; i++) { 
-		allDishesHtml += "<div class=\"col-md-4\">"+
-				            "<div class=\"col-md-12 col-xs-8 thumb\">"+
+		allDishesHtml += "<div class=\"col-md-4 col-sm-12 col-xs-12\">"+
+				            "<div class=\"col-md-12 col-sm-12 col-xs-12 thumb\">"+
 					            "<a class=\"thumbnail\">"+
-						        	"<img class=\"imageheight\" src='images/"+ allDishes[i].image + "'>"+
+						        	"<img class=\"img-responsive center-block imageheight\" src='images/"+ allDishes[i].image + "'>"+
 					            "</a>"+
 				            "</div>"+
-					        "<div class=\"col-md-12 col-xs-8 thumb\">"+
+					        "<div class=\"col-md-12 col-sm-12 col-xs-12 thumb\">"+
 					        	"<span class=\"input-group-addon\">" + allDishes[i].name + "</span>"+
 					        "</div>"+
-					        "<div class=\"col-md-12 col-xs-8 thumb\">"+
+					        "<div class=\"col-md-12 col-sm-12 col-xs-12 thumb\">"+
 								        "<p class=\"parapadding\">"+allDishes[i].description+"</p>"+
 							"</div>"+
 						"</div>";
