@@ -6,11 +6,28 @@ var DinnerModel = function() {
 	var numberOfGuests = 1;
 	var menu = [];
 
+	this._observers = [];
+
+	this.attach = function(observer){
+		console.log("DinnerModel: this.attach");
+		this._observers.push(observer);
+	}
+
+
+	this.notify = function(args){
+		console.log("DinnerModel: this.notify");
+		for(key in this._observers){
+			this._observers[key].update();
+		}
+	}
+
 
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2
 		console.log("set~ "+ num);
 		numberOfGuests = num;
+
+		this.notify();
 	}
 
 		

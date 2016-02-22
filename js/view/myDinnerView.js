@@ -1,13 +1,14 @@
 //MenuDishView Object constructor
 var MyDinnerView = function(container, model){
+
+	model.attach(this);
+
 	this.numberOfGuests = container.find("#numberOfGuests");
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
 	this.myMenu = container.find("#myMenu");
 
 	var dishesInFullMenu = model.getFullMenu();
-	
-	
 	
 	//console.log("after update: "+ model.getNumberOfGuests());
 	
@@ -36,5 +37,9 @@ var MyDinnerView = function(container, model){
 					"</tr>";
 
 	this.myMenu.html(myMenuHtml);
+
+	this.update = function(args){
+		this.numberOfGuests.html(model.getNumberOfGuests);
+	}
 
 }
