@@ -3,10 +3,14 @@ var MyDinnerView = function(container, model){
 	this.numberOfGuests = container.find("#numberOfGuests");
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
-
 	this.myMenu = container.find("#myMenu");
 
 	var dishesInFullMenu = model.getFullMenu();
+	
+	
+	
+	//console.log("after update: "+ model.getNumberOfGuests());
+	
 	
 	this.numberOfGuests.html(model.getNumberOfGuests);
     
