@@ -25,7 +25,12 @@ var DinnerModel = function() {
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2
 		console.log("set~ "+ num);
-		numberOfGuests = num;
+		if(num<0){
+			numberOfGuests = 0;
+		}
+		else{
+			numberOfGuests = num;
+		}
 
 		this.notify();
 	}
