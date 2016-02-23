@@ -1,15 +1,18 @@
 //SelectDishView Object constructor
 var SelectDishView = function (container, model) {
-	
 	// Get all the relevant elements of the view (ones that show data
   	// and/or ones that responed to interaction)
 	this.allDishes = container.find("#allDishes");
-	var allDishes = model.getAllDishes("starter");
+	this.typeSelector = container.find("#typeSelector");
+	this.searchInput = container.find("#searchInput");
+	this.searchButton = container.find("#searchButton");
 
+	var allDishes = model.getAllDishes("starter");
 	var allDishesHtml = "";
 
 	for (i = 0; i < allDishes.length; i++) { 
-		allDishesHtml += "<div class=\"col-md-4 col-sm-12 col-xs-12\">"+
+		console.log("dish.name: "+allDishes[i].name);
+		allDishesHtml += "<div class=\"col-md-4 col-sm-12 col-xs-12 displayedDish\" id="+allDishes[i].id+">"+
 				            "<div class=\"col-md-12 col-sm-12 col-xs-12 thumb\">"+
 					            "<a class=\"thumbnail\">"+
 						        	"<img href=\"\" onclick=\"selectedDishDetails()\" class=\"img-responsive center-block imageheight\" src='images/"+ allDishes[i].image + "'>"+
@@ -23,7 +26,8 @@ var SelectDishView = function (container, model) {
 							"</div>"+
 						"</div>";
     }
-	
-	this.allDishes.html(allDishesHtml);
+
+	$("#allDishes").html(allDishesHtml);
+
+	this.displayedDish = $(".displayedDish");
 }
- 
