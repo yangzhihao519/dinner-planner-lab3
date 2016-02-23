@@ -14,7 +14,7 @@ var OneDishView = function (container, model) {
     console.log(oneDish.name);
 
 	this.oneDishName.html(oneDish.name);
-	this.oneDishImage.html("<a class=\"thumbnail\">"+"<img class=\"img-responsive center-block\" src=\"images/"+oneDish.image+"\">"+"</a>");
+	this.oneDishImage.html("<a class=\"thumbnail\">"+"<img class=\"img-responsive center-block imageheight\" src=\"images/"+oneDish.image+"\">"+"</a>");
 	this.oneDishDescription.html(oneDish.description);
 	this.oneDishNumberOfGuests.html(model.getNumberOfGuests);
 	this.oneDishTotalPrice.html(model.getDishTotalPrice("100"));
