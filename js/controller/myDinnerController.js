@@ -1,4 +1,4 @@
-//ExampleView Object constructor
+//MyDinnerView Object constructor
 var MyDinnerController = function (view, model) {
 	
 	// Get all the relevant elements of the view (ones that show data
