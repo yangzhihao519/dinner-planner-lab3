@@ -24,7 +24,7 @@ var PrepareDishView = function (container, model) {
 									"<div class=\"col-md-12\">"+
 										"<div class=\"col-md-3 thumb\">"+
 											"<a class=\"thumbnail\">"+
-											"<img src='images/"+dish.image+"'>"+
+											"<img class=\"img-responsive center-block imageheight\" src='images/"+dish.image+"'>"+
 											"</a>"+
 										"</div>"+
 										"<div class=\"col-md-3\">"+

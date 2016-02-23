@@ -4,50 +4,52 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dinner planner</title>
+    <title>View 5</title>
 
     <script src="js/jquery.1.12.0.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	
 	<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
 
   </head>
   <body>
 	<div class="container-fluid" id="dinnerOverviewView">
-		<div class="row" style="background-color: rgb(255, 235, 182)">
-			<div class="col-md-4">
-				<h2>My Dinner: <span id="dinnerOverviewViewNumberOfGuests"></span> people</h2>
-			</div>
-			<div class="col-md-4">
-			</div>
-			<div class="col-md-4">
-				<button type="button" class="btn btn-default"><h4>Go back and edit dinner</h4></button>
-			</div>
-		</div>
-
 		<div class="row">
+			<div class="headersection col-md-12">
+				<h1>HOMELETTE <small style="color: darkgoldenrod;">  From the best chefs in the world directly into your kitchen</small></h1> 
+			</div>
+			<div class="col-md-12" style="padding-top: 1%; background-color: lightgray;">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="col-md-4 col-sm-4 col-xs-7">
+							<p class="lead">Dinner: <span id="dinnerOverviewViewNumberOfGuests"></span><span> People</span></p>
+						</div>
+						<div class="col-md-2 col-md-offset-6 col-sm-2 col-sm-offset-6 col-xs-5">
+							<button type="button" class="btn btn-primary">Edit Dinner</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		
 			<br/>
-			<div class="col-md-1">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="col-md-12" id="displayMyDishes" style="text-align: center">
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-8" id="displayMyDishes" style="text-align: center">
-			</div>
-			<div class="col-md-1">
-			</div>
-			<div class="col-md-1">
-				Total: <br/>
-				<span id="dinnerOverviewViewTotalPrice"></span> SEK
-			</div>
-		</div>
-        
-        <hr/>
-		<div class="row">
-			<div class="col-md-4">
-			</div>
-			<div class="col-md-4" style="text-align: center">
-				<button type="button" class="btn btn-default">Print Full Recipe</button>
-			</div>
-			<div class="col-md-4">
+		        
+			<div class="col-md-12">
+				<div class="col-md-2 col-md-offset-8 col-sm-2 col-sm-offset-7 col-xs-5 col-xs-offset-1">
+					<b>Total: <span id="dinnerOverviewViewTotalPrice"></span> SEK </b>
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-4">
+					<button type="button" class="btn btn-success">Print Full Recipe</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -60,11 +62,13 @@
 	<!-- The application JavaScript code -->
 	<script src="js/app.js"></script>
 	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/guestNumberView.js"></script>
+	<script src="js/view/myDinnerView.js"></script>
 	<script src="js/view/selectDishView.js"></script>
     <script src="js/view/oneDishView.js"></script>
-    <script src="js/view/dinnerOverviewView.js"></script>
     <script src="js/view/prepareDishView.js"></script>
+	<script src="js/view/dinnerOverviewView.js"></script>
+	<script src="js/controller/myDinnerController.js"></script>
+	
 	
   </body>
 </html>
