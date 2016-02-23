@@ -122,7 +122,7 @@ var DinnerModel = function() {
 		}else{
 			newMenu.push(id);
 		}
-		
+
 		menu = newMenu;
 
 		this.notify("menu");
@@ -185,7 +185,7 @@ var DinnerModel = function() {
 		var dishTotalPrice = 0;
 
 		for(key in allIngredients){
-			dishTotalPrice = dishTotalPrice + allIngredients[key].price;
+			dishTotalPrice += allIngredients[key].price;
 		}
 
 		return dishTotalPrice;
