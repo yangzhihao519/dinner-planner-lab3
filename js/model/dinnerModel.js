@@ -93,15 +93,13 @@ var DinnerModel = function() {
 		var totalMenuPrice = 0;
 
 		for(key in menu){
-			var dish = this.getDish(menu[key]);
-			var allIngredients = this.getAllIngredients;
-
-			for(ingredient in allIngredients){
-				totalMenuPrice = totalMenuPrice + ingredient.price;
-			}
+			var dishId = menu[key];
+			var thisDishPrice = this.getDishTotalPrice(dishId);
+			totalMenuPrice += thisDishPrice;
 		}
 
-		return totalMenuPrice;
+		console.log("totalMenuPrice: "+ totalMenuPrice);
+		return totalMenuPrice;	
 	}
 
 	//Adds the passed dish to my menu. If the dish of that type already exists on the menu
@@ -124,6 +122,7 @@ var DinnerModel = function() {
 		// }
 
 		// menu = newMenu;
+		this.notify("menu");
 	}
 
 	//Removes dish from menu

@@ -8,13 +8,9 @@ var MyDinnerView = function(container, model){
 	this.minusButton = container.find("#minusGuest");
 	this.myMenu = container.find("#myMenu");
 
-	var dishesInFullMenu = model.getFullMenu();
-	
-	//console.log("after update: "+ model.getNumberOfGuests());
-	
-	
 	this.numberOfGuests.html(model.getNumberOfGuests);
-    
+
+	var dishesInFullMenu = model.getFullMenu();
     var myMenuHtml = "";
 
     for(key in dishesInFullMenu){
@@ -29,11 +25,11 @@ var MyDinnerView = function(container, model){
 
     myMenuHtml +=   "<tr>"+
 						"<td>Pending</td>"+
-						"<td>0.00</td>"+
+						"<td>0.00 SEK</td>"+
 					"</tr>"+
 					"<tr>"+
 						"<td>Total</td>"+
-						"<td>"+model.getTotalMenuPrice()+"</td>"+
+						"<td>"+model.getTotalMenuPrice()+" SEK</td>"+
 					"</tr>";
 
 	this.myMenu.html(myMenuHtml);
@@ -42,6 +38,29 @@ var MyDinnerView = function(container, model){
 		if (args == "numberOfGuests") {
 			this.numberOfGuests.html(model.getNumberOfGuests);
 		}else if(args == "menu"){
+			dishesInFullMenu = model.getFullMenu();
+			myMenuHtml = "";
+
+			for(key in dishesInFullMenu){
+		    	var dish = dishesInFullMenu[key];
+
+		    	myMenuHtml +=   "<tr>"+ 
+			    					"<td>"+dish.name+"</td>"+
+			    					"<td>"+model.getDishTotalPrice(dish.id)+" SEK</td>"+
+		    					"</tr>";
+
+		    }
+
+		    myMenuHtml +=   "<tr>"+
+								"<td>Pending</td>"+
+								"<td>0.00</td>"+
+							"</tr>"+
+							"<tr>"+
+								"<td>Total</td>"+
+								"<td>"+model.getTotalMenuPrice()+" SEK</td>"+
+							"</tr>";
+
+			this.myMenu.html(myMenuHtml);
 
 		}else{
 			// do nothing..
