@@ -39,7 +39,13 @@ var MyDinnerView = function(container, model){
 	this.myMenu.html(myMenuHtml);
 
 	this.update = function(args){
-		this.numberOfGuests.html(model.getNumberOfGuests);
+		if (args == "numberOfGuests") {
+			this.numberOfGuests.html(model.getNumberOfGuests);
+		}else if(args == "menu"){
+
+		}else{
+			// do nothing..
+		}
 	}
 
 }

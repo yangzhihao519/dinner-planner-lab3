@@ -17,7 +17,7 @@ var DinnerModel = function() {
 	this.notify = function(args){
 		console.log("DinnerModel: this.notify");
 		for(key in this._observers){
-			this._observers[key].update();
+			this._observers[key].update(args);
 		}
 	}
 
@@ -32,7 +32,7 @@ var DinnerModel = function() {
 			numberOfGuests = num;
 		}
 
-		this.notify();
+		this.notify("numberOfGuests");
 	}
 
 		
