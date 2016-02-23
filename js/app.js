@@ -1,5 +1,5 @@
 $(function() {
-	//We instantiate our model
+	//We initialise our model
 	var model = new DinnerModel();
     model.addDishToMenu("1");
     model.addDishToMenu("100");
@@ -11,6 +11,7 @@ $(function() {
 	var prepareDishView = new PrepareDishView($("#prepareDishView"),model);
 	var oneDishView = new OneDishView($("#oneDishView"), model);
 	var dinnerOverviewView = new DinnerOverviewView($('#dinnerOverviewView'), model);
+
 	var myDinnerView = new MyDinnerView($('#myDinnerView'), model);
 	var myDinnerController = new MyDinnerController(myDinnerView, model);
 	
