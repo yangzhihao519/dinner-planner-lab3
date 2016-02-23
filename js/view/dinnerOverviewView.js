@@ -17,7 +17,7 @@ var DinnerOverviewView = function (container, model) {
 		myDishesHtml += "<div class=\"col-md-4 col-sm-6 col-xs-12\">"+
 				            "<div class=\"col-md-12 col-xs-8 thumb\">"+
 					            "<a class=\"thumbnail\">"+
-						        	"<img class=\"img-responsive center-block imageheight\" src='images/"+ myDishes[i].image + "'>"+
+						        	"<img onclick=\"selectedDishDetails()\" class=\"img-responsive center-block imageheight\" src='images/"+ myDishes[i].image + "'>"+
 					            "</a>"+
 				            "</div>"+
 					        "<div class=\"col-md-12 col-xs-8 thumb\">"+
