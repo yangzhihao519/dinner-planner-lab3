@@ -12,7 +12,7 @@ var SelectDishView = function (container, model) {
 
 	for (i = 0; i < allDishes.length; i++) { 
 		console.log("dish.name: "+allDishes[i].name);
-		allDishesHtml += "<div class=\"col-md-4 col-sm-12 col-xs-12\">"+
+		allDishesHtml += "<div class=\"col-md-4 col-sm-12 col-xs-12 displayedDish\" id="+allDishes[i].id+">"+
 				            "<div class=\"col-md-12 col-sm-12 col-xs-12 thumb\">"+
 					            "<a class=\"thumbnail\">"+
 						        	"<img class=\"img-responsive center-block imageheight\" src='images/"+ allDishes[i].image + "'>"+
@@ -28,4 +28,6 @@ var SelectDishView = function (container, model) {
     }
 
 	$("#allDishes").html(allDishesHtml);
+
+	this.displayedDish = $(".displayedDish");
 }

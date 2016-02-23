@@ -5,6 +5,7 @@ var DinnerModel = function() {
 	// and selected dinner options for dinner menu
 	var numberOfGuests = 1;
 	var menu = [];
+	var selectedDishId = "";
 
 	this._observers = [];
 
@@ -43,22 +44,33 @@ var DinnerModel = function() {
 		return numberOfGuests;
 	}
 
-	//Returns the dish that is on my menu for selected type 
-	this.getSelectedDish = function(type) {
-		var selectedDishes = [];
+    
+    this.setSelectedDishId = function(id){
+    	selectedDishId = id;
 
-		for (key in menu){
-			var dish = this.getDish(menu[key]);
+    	this.notify("selectedDishId");
+    }
 
-			if (dish.type == type) {
-				selectedDishes.push(dish);
-			}else{
-				// do nothing
-			}
-		}
-		//TODO Lab 2
-		return selectedDishes;
-	}
+    this.getSelectedDishId = function(){
+    	return selectedDishId;
+    }
+
+	// //Returns the dish that is on my menu for selected type 
+	// this.getSelectedDish = function(type) {
+	// 	var selectedDishes = [];
+
+	// 	for (key in menu){
+	// 		var dish = this.getDish(menu[key]);
+
+	// 		if (dish.type == type) {
+	// 			selectedDishes.push(dish);
+	// 		}else{
+	// 			// do nothing
+	// 		}
+	// 	}
+	// 	//TODO Lab 2
+	// 	return selectedDishes;
+	// }
 
 	//Returns all the dishes on the my menu.
 	this.getFullMenu = function() {
