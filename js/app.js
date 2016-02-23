@@ -7,7 +7,7 @@ $(function() {
 	var myDinnerController = new MyDinnerController(myDinnerView, model);
 
 	var selectDishView = new SelectDishView($("#selectDishView"), model);
-	var selectDishController = new SelectDishController($(selectDishView, model);
+	var selectDishController = new SelectDishController(selectDishView, model);
 
 	var oneDishView = new OneDishView($("#oneDishView"), model);
 	var oneDishController = new OneDishController(oneDishView, model);
