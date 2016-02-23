@@ -8,7 +8,6 @@ var MyDinnerController = function (view, model) {
 	//this.minusButton = container.find("#minusGuest");
 	
 	view.plusButton.click(function(){
-		console.log("+button");
 		model.setNumberOfGuests(model.getNumberOfGuests() + 1);
 	});
  

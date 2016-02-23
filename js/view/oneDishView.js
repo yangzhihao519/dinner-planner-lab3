@@ -1,8 +1,5 @@
 //OneDishView Object constructor
 var OneDishView = function (container, model) {
-	
-	model.attach(this);
-	
 	// Get all the relevant elements of the view (ones that show data
   	// and/or ones that responed to interaction)
 	this.oneDishName = container.find("#oneDishName");

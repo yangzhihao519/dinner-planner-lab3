@@ -1,10 +1,6 @@
 $(function() {
 	//We initialise our model
 	var model = new DinnerModel();
-    model.addDishToMenu("1");
-    model.addDishToMenu("100");
-    model.addDishToMenu("101");
-	//model.setNumberOfGuests(3);
 
 	//And create the needed controllers and views
 	var selectDishView = new SelectDishView($("#selectDishView"), model);
