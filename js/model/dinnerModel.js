@@ -105,23 +105,26 @@ var DinnerModel = function() {
 	//Adds the passed dish to my menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
-		menu.push(id);
-
 		//TODO Lab 2 
-		// var newMenu = [];
+		var newMenu = [];
 
-		// for(key in menu){
-		// 	var existedDish = this.getDish(menu[key]);
-		// 	var newDish = this.getDish(id);
+		if(menu.length >= 1){
+			for(key in menu){
+				var existedDish = this.getDish(menu[key]);
+				var newDish = this.getDish(id);
 
-		// 	if(existedDish.type == newDish.type){
-		// 		newMenu.push(id);
-		// 	}else{
-		// 		newMenu.push(menu[key]);
-		// 	}
-		// }
+				if(existedDish.type == newDish.type){
+					newMenu.push(id);
+				}else{
+					newMenu.push(menu[key]);
+				}
+			}
+		}else{
+			newMenu.push(id);
+		}
+		
+		menu = newMenu;
 
-		// menu = newMenu;
 		this.notify("menu");
 	}
 
