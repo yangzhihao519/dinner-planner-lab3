@@ -8,7 +8,7 @@
 
 .header1{
 	position: absolute;
-    width: 98%;
+    width: 100%;
 	background-color: rgba(255, 235, 182, 0.7);
 	padding-left: 30px;
 	padding-right: 30px;
@@ -23,11 +23,11 @@
 }
 .textBox{
 	position: absolute;
-	top: 200px;
-	left: 50px;
-	width: 400px;
+	top: 10%;
+	left: 5%;
+	width:40%;
 	background-color: rgba(255, 255, 255, 0.7);
-	padding:10px;
+	padding:1%;
 }
 
 .parapadding{
