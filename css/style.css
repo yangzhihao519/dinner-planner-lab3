@@ -31,15 +31,12 @@
 }
 .textBox{
 	position: absolute;
-<<<<<<< HEAD
 	top: 10%;
 	left: 5%;
 	width:40%;
-=======
 	top: 20%;
 	left: 5%;
 	width: 40%;
->>>>>>> origin/master
 	background-color: rgba(255, 255, 255, 0.7);
 	padding:1%;
 }
