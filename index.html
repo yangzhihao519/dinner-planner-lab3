@@ -102,7 +102,7 @@
 <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ END OF VIEW 2 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
 <!-- ********************************************************** VIEW 3 ***************************************************************************** -->
-				<div class="col-md-9 col-sm-8" style="border-left: 2px solid #999">
+				<div class="col-md-9 col-sm-8" style="border-left: 2px solid #999" id="selectDishView">
 					<div class="panel panel-default" style="background-color: lightgray;">
 						<div class="panel-body">
 							<div class="col-md-12">
@@ -110,9 +110,9 @@
 								<div class="col-md-12">
 									<div class="col-md-3">
 										<div class="input-group">
-											<input type="text" class="form-control" placeholder="Search for...">
+											<input type="text" class="form-control" id="searchInput" placeholder="Search for...">
 											<span class="input-group-btn">
-											<button class="btn btn-default" type="button">Search</button>
+											<button class="btn btn-default" type="button" id="searchButton">Search</button>
 											</span>
 										</div>
 									</div>
@@ -131,7 +131,7 @@
 						<div class="panel panel-default">
 							<div class="panel-body">
 								<h1> Dishes to be selected</h1>
-								<div id="selectDishView">
+								<div>
 									<h5>All Dishes: </h5><br/>
 									<div id="allDishes"></div>
 								</div>
