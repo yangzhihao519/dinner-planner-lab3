@@ -40,7 +40,6 @@ var DinnerModel = function() {
 	// should return 
 	this.getNumberOfGuests = function() {
 		//TODO Lab 2
-		console.log("get~ "+ numberOfGuests);
 		return numberOfGuests;
 	}
 
@@ -157,6 +156,7 @@ var DinnerModel = function() {
 		}
 
 		menu = newMenu;
+		this.notify("menu");
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
