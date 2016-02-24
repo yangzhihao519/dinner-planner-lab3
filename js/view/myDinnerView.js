@@ -23,20 +23,24 @@ var MyDinnerView = function(container, model){
 		    	myMenuHtml +=   "<tr>"+ 
 			    					"<td>"+dish.name+"</td>"+
 			    					"<td>"+model.getDishTotalPrice(dish.id)+" SEK</td>"+
+									"<td><span class=\"glyphicon glyphicon-remove removeDish\" aria-hidden=\"true\" id="+dish.id+"></td>"+
 		    					"</tr>";
 
 		    }
 
 		    myMenuHtml +=   "<tr>"+
-								"<td>Pending</td>"+
-								"<td>0.00</td>"+
-							"</tr>"+
-							"<tr>"+
-								"<td>Total</td>"+
-								"<td>"+model.getTotalMenuPrice()+" SEK</td>"+
+								"<td><b>Total</b></td>"+
+								"<td><b>"+model.getTotalMenuPrice()+" SEK</b></td>"+
 							"</tr>";
 
 			this.myMenu.html(myMenuHtml);
+			
+			$('.removeDish').click(function(){
+				var id = $(this).attr("id");
+				model.removeDishFromMenu(id);
+				
+				
+			});
 
 		}else{
 			// do nothing..
