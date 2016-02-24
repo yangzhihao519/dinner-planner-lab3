@@ -125,20 +125,17 @@ var DinnerModel = function() {
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
 		//TODO Lab 2
-		var newMenu = [];
-
-		for(key in menu){
+		for (key in menu){
 			var dishId = menu[key];
 
-			if (dishId != id) {
-				newMenu.push(dishId);
+			if(dishId == id){
+				menu.splice(key, 1);
+				break;
 			}
 			else{
-				//do nothing
+				// do nothing
 			}
 		}
-
-		menu = newMenu;
 		this.notify("menu");
 	}
 
