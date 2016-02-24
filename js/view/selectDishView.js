@@ -28,6 +28,54 @@ var SelectDishView = function (container, model) {
     }
 
 	$("#allDishes").html(allDishesHtml);
-
 	this.displayedDish = $(".displayedDish");
+
+	this.displayedDish.click(function(){
+		console.log("click");
+		var id = $(this).attr('id');
+		console.log("click: "+ id);
+		model.setSelectedDishId(id);
+	});
+
+	this.update = function(args){
+		var type =  $('#typeSelector :selected').val();
+		var filter = "";
+		if(args == "searchDish"){
+			filter = $('#searchInput').val();
+		}else if(args == "selectType"){
+			// do nothing
+		}else{
+			// do nothing
+		}
+
+		var allDishes = model.getAllDishes(type, filter);
+
+		var allDishesHtml = "";
+
+		for (i = 0; i < allDishes.length; i++) { 
+			console.log("dish.name: "+allDishes[i].name);
+			allDishesHtml += "<div class=\"col-md-4 col-sm-12 col-xs-12 displayedDish\" id="+allDishes[i].id+">"+
+					            "<div class=\"col-md-12 col-sm-12 col-xs-12 thumb\">"+
+						            "<a class=\"thumbnail\" onclick=\"selectedDishDetails()\">"+
+							        	"<img class=\"img-responsive center-block imageheight\" src='images/"+ allDishes[i].image + "'>"+
+						            "</a>"+
+					            "</div>"+
+						        "<div class=\"col-md-12 col-sm-12 col-xs-12 thumb\">"+
+						        	"<span class=\"input-group-addon\">" + allDishes[i].name + "</span>"+
+						        "</div>"+
+						        "<div class=\"col-md-12 col-sm-12 col-xs-12 thumb\">"+
+									        "<p class=\"parapadding\">"+allDishes[i].description+"</p>"+
+								"</div>"+
+							"</div>";
+	    }
+	    
+	    $("#allDishes").html(allDishesHtml);
+	    this.displayedDish = $(".displayedDish");
+	    this.displayedDish.click(function(){
+			console.log("click");
+			var id = $(this).attr('id');
+			console.log("click: "+ id);
+			model.setSelectedDishId(id);
+		});
+	}
 }
