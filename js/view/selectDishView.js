@@ -14,8 +14,8 @@ var SelectDishView = function (container, model) {
 		console.log("dish.name: "+allDishes[i].name);
 		allDishesHtml += "<div class=\"col-md-4 col-sm-12 col-xs-12 displayedDish\" id="+allDishes[i].id+">"+
 				            "<div class=\"col-md-12 col-sm-12 col-xs-12 thumb\">"+
-					            "<a class=\"thumbnail\">"+
-						        	"<img href=\"\" onclick=\"selectedDishDetails()\" class=\"img-responsive center-block imageheight\" src='images/"+ allDishes[i].image + "'>"+
+					            "<a class=\"thumbnail\" onclick=\"selectedDishDetails()\">"+
+						        	"<img href=\"\" class=\"img-responsive center-block imageheight\" src='images/"+ allDishes[i].image + "'>"+
 					            "</a>"+
 				            "</div>"+
 					        "<div class=\"col-md-12 col-sm-12 col-xs-12 thumb\">"+

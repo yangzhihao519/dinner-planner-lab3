@@ -35,7 +35,6 @@
 							<button type="button" class="btn btn-primary btn-md" onclick="DinnerMenu()"> Create new dinner</button>
 						</div>
 					</div>
-					 <!-- <button type="button" class="btn btn-primary" onclick="DinnerMenu()">Edit Dinner</button> -->
 				</div>  
 			</div>  <!-- end of loading div -->
 			
@@ -118,37 +117,23 @@
 										</div>
 									</div>
 									<div class="col-md-3">
-										<div class="dropdown">
-											<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-											Select
-												<span class="caret"></span>
-											</button>
-											<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-											<li><a href="#">All Dish</a></li>
-											<li><a href="#">Starter</a></li>
-											<li><a href="#">Main Course</a></li>
-											<li><a href="#">Dessert</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="col-md-3">
-										<select class="selectpicker" id="typeSelector">
+										<select class="selectpicker btn btn-default" id="typeSelector">
 										    <option value="starter" selected="selected">Starter</option>
 										    <option value="main dish">Main Dish</option>
 										    <option value="dessert">Dessert</option>
 										</select>
 									</div>
 								</div>
-								<div class="col-md-12">
-									<div class="panel panel-default">
-										<div class="panel-body">
-											<h1> Dishes to be selected</h1>
-											<div id="selectDishView">
-												<h5>All Dishes: </h5><br/>
-												<div id="allDishes"></div>
-											</div>
-										</div>
-									</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<h1> Dishes to be selected</h1>
+								<div id="selectDishView">
+									<h5>All Dishes: </h5><br/>
+									<div id="allDishes"></div>
 								</div>
 							</div>
 						</div>
