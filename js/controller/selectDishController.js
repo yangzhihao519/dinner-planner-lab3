@@ -1,13 +1,23 @@
 //SelectDishView Object constructor
-var SelectDishView = function (container, model) {
-	// Get all the relevant elements of the view (ones that show data
-  	// and/or ones that responed to interaction)
-	this.allDishes = container.find("#allDishes");
-	this.typeSelector = container.find("#typeSelector");
-	this.searchInput = container.find("#searchInput");
-	this.searchButton = container.find("#searchButton");
+var SelectDishController = function (view, model) {
+	$("#typeSelector").change(function() {
+        var type =  $('#typeSelector :selected').val();
+	    var allDishes = model.getAllDishes(type);
 
-	var allDishes = model.getAllDishes("starter");
+	    $("#allDishes").html(getAllDishesHtml(allDishes));
+	});
+
+	view.searchButton.click(function(){
+		var type =  $('#typeSelector :selected').val();
+		var filter = $('#searchInput').val()
+	    var allDishes = model.getAllDishes(type, filter);
+	    
+	    $("#allDishes").html(getAllDishesHtml(allDishes));
+	});
+}
+
+
+function getAllDishesHtml(allDishes){
 	var allDishesHtml = "";
 
 	for (i = 0; i < allDishes.length; i++) { 
@@ -27,5 +37,5 @@ var SelectDishView = function (container, model) {
 						"</div>";
     }
 
-	$("#allDishes").html(allDishesHtml);
+    return allDishesHtml;
 }

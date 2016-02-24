@@ -17,7 +17,7 @@ var DinnerModel = function() {
 	this.notify = function(args){
 		console.log("DinnerModel: this.notify");
 		for(key in this._observers){
-			this._observers[key].update();
+			this._observers[key].update(args);
 		}
 	}
 
@@ -25,9 +25,14 @@ var DinnerModel = function() {
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2
 		console.log("set~ "+ num);
-		numberOfGuests = num;
+		if(num<0){
+			numberOfGuests = 0;
+		}
+		else{
+			numberOfGuests = num;
+		}
 
-		this.notify();
+		this.notify("numberOfGuests");
 	}
 
 		
@@ -88,37 +93,39 @@ var DinnerModel = function() {
 		var totalMenuPrice = 0;
 
 		for(key in menu){
-			var dish = this.getDish(menu[key]);
-			var allIngredients = this.getAllIngredients;
-
-			for(ingredient in allIngredients){
-				totalMenuPrice = totalMenuPrice + ingredient.price;
-			}
+			var dishId = menu[key];
+			var thisDishPrice = this.getDishTotalPrice(dishId);
+			totalMenuPrice += thisDishPrice;
 		}
 
-		return totalMenuPrice;
+		console.log("totalMenuPrice: "+ totalMenuPrice);
+		return totalMenuPrice;	
 	}
 
 	//Adds the passed dish to my menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
-		menu.push(id);
-
 		//TODO Lab 2 
-		// var newMenu = [];
+		var newMenu = [];
 
-		// for(key in menu){
-		// 	var existedDish = this.getDish(menu[key]);
-		// 	var newDish = this.getDish(id);
+		if(menu.length >= 1){
+			for(key in menu){
+				var existedDish = this.getDish(menu[key]);
+				var newDish = this.getDish(id);
 
-		// 	if(existedDish.type == newDish.type){
-		// 		newMenu.push(id);
-		// 	}else{
-		// 		newMenu.push(menu[key]);
-		// 	}
-		// }
+				if(existedDish.type == newDish.type){
+					newMenu.push(id);
+				}else{
+					newMenu.push(menu[key]);
+				}
+			}
+		}else{
+			newMenu.push(id);
+		}
 
-		// menu = newMenu;
+		menu = newMenu;
+
+		this.notify("menu");
 	}
 
 	//Removes dish from menu
@@ -144,6 +151,11 @@ var DinnerModel = function() {
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
 	//if you don't pass any filter all the dishes will be returned
 	this.getAllDishes = function (type,filter) {
+		// if (type) {
+
+		// }else{
+			
+		// }
 	  return $(dishes).filter(function(index,dish) {
 		var found = true;
 		if(filter){
@@ -178,7 +190,7 @@ var DinnerModel = function() {
 		var dishTotalPrice = 0;
 
 		for(key in allIngredients){
-			dishTotalPrice = dishTotalPrice + allIngredients[key].price;
+			dishTotalPrice += allIngredients[key].price;
 		}
 
 		return dishTotalPrice;

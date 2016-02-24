@@ -1,4 +1,4 @@
-//ExampleView Object constructor
+//MyDinnerView Object constructor
 var MyDinnerController = function (view, model) {
 	
 	// Get all the relevant elements of the view (ones that show data
@@ -8,7 +8,6 @@ var MyDinnerController = function (view, model) {
 	//this.minusButton = container.find("#minusGuest");
 	
 	view.plusButton.click(function(){
-		console.log("+button");
 		model.setNumberOfGuests(model.getNumberOfGuests() + 1);
 	});
  

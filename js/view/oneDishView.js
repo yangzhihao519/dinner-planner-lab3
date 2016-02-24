@@ -1,6 +1,5 @@
 //OneDishView Object constructor
 var OneDishView = function (container, model) {
-	
 	// Get all the relevant elements of the view (ones that show data
   	// and/or ones that responed to interaction)
 	this.oneDishName = container.find("#oneDishName");
@@ -9,6 +8,7 @@ var OneDishView = function (container, model) {
 	this.oneDishNumberOfGuests = container.find("#oneDishNumberOfGuests");
 	this.oneDishAllIngredients = container.find("#oneDishAllIngredients");
 	this.oneDishTotalPrice = container.find("#oneDishTotalPrice");
+	this.confirmDishButton = container.find("#confirmDishButton");
 
 	var oneDish = model.getDish("100");
     console.log(oneDish.name);
