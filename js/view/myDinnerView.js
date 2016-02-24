@@ -19,6 +19,7 @@ var MyDinnerView = function(container, model){
 
 			for(key in dishesInFullMenu){
 		    	var dish = dishesInFullMenu[key];
+		    	console.log("MyDinnerView dish: "+dish);
 
 		    	myMenuHtml +=   "<tr>"+ 
 			    					"<td>"+dish.name+"</td>"+
