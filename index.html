@@ -45,219 +45,117 @@
 			
 			
 	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ END OF VIEW 1  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->	
-<<<<<<< HEAD
 
 	
 	<!-- ****************************************** VIEW 2 *************************************************************************** -->		
-				<div id="view23" style="display: none;">
-					<div class="col-md-3 col-sm-4" id="myDinnerView">
-						<p class="lead">My Dinner</p>    
-						<div class="col-md-12 col-sm-12 col-xs-5" id="guestNumberView">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<span class="col-md-5">Number of People:</span>
-									<span class="col-md-7">
-										<span class="col-md-8">
-											<!-- <input type="number" style="width:50px" id="numberOfGuests" min="0" max="100"></input> -->
-											<span id="numberOfGuests"></span>
-										</span>
-										<div class="pull-right">
-												<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-												<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
-										</div>
+			<div id="view23" style="display: none;">
+				<div class="col-md-3 col-sm-4" id="myDinnerView">
+					<p class="lead">My Dinner</p>    
+					<div class="col-md-12 col-sm-12 col-xs-5" id="guestNumberView">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<span class="col-md-5">Number of People:</span>
+								<span class="col-md-7">
+									<span class="col-md-8">
+										<!-- <input type="number" style="width:50px" id="numberOfGuests" min="0" max="100"></input> -->
+										<span id="numberOfGuests"></span>
 									</span>
-								</div>
-							</div>
-						</div> <script>console.log("view23");</script>
-						<div class="col-md-12 col-sm-12 col-xs-7">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<table class="table">
-									<thead>
-										<tr>
-										  <th>Dish Name</th>
-										  <th>Cost</th>
-										</tr>
-									</thead>
-									<tbody id="myMenu">
-										<tr>
-										  <td>Pending</td>
-										  <td>0.00</td>
-										</tr>
-										<tr>
-										  <td>Total</td>
-										  <td></td>
-										</tr>
-									</tbody>
-									</table>		  
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 parapadding1">
-							<div class="btn-group">
-								<button class="btn btn-default" type="button" onclick="confirmDinner()">
-									Confirm Dinner
-								</button>
+									<div class="pull-right">
+											<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+											<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+									</div>
+								</span>
 							</div>
 						</div>
 					</div>
+					<div class="col-md-12 col-sm-12 col-xs-7">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<table class="table">
+								<thead>
+									<tr>
+									  <th>Dish Name</th>
+									  <th>Cost</th>
+									</tr>
+								</thead>
+								<tbody id="myMenu">
+									<tr>
+									  <td>Pending</td>
+									  <td>0.00</td>
+									</tr>
+									<tr>
+									  <td>Total</td>
+									  <td></td>
+									</tr>
+								</tbody>
+								</table>		  
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 parapadding1">
+						<div class="btn-group">
+							<button class="btn btn-default" type="button" onclick="confirmDinner()">
+								Confirm Dinner
+							</button>
+						</div>
+					</div>
+				</div>
 <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ END OF VIEW 2 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
 <!-- ********************************************************** VIEW 3 ***************************************************************************** -->
-					<div class="col-md-9 col-sm-8" style="border-left: 2px solid #999">
-						<div class="panel panel-default" style="background-color: lightgray;">
-							<div class="panel-body">
+				<div class="col-md-9 col-sm-8" style="border-left: 2px solid #999">
+					<div class="panel panel-default" style="background-color: lightgray;">
+						<div class="panel-body">
+							<div class="col-md-12">
+								<p>Select Dish</p>
 								<div class="col-md-12">
-									<p>Select Dish</p>
-									<div class="col-md-12">
-										<div class="col-md-3">
-											<div class="input-group">
-												<input type="text" class="form-control" placeholder="Search for...">
-												<span class="input-group-btn">
-												<button class="btn btn-default" type="button">Search</button>
-												</span>
-											</div>
-										</div>
-										<div class="col-md-3">
-											<div class="dropdown">
-												<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-												Select
-													<span class="caret"></span>
-												</button>
-												<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-												<li><a href="#">All Dish</a></li>
-												<li><a href="#">Starter</a></li>
-												<li><a href="#">Main Course</a></li>
-												<li><a href="#">Dessert</a></li>
-												</ul>
-											</div>
+									<div class="col-md-3">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="Search for...">
+											<span class="input-group-btn">
+											<button class="btn btn-default" type="button">Search</button>
+											</span>
 										</div>
 									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<h1> Dishes to be selected</h1>
-									<div id="selectDishView">
-										<h5>All Dishes: </h5><br/>
-										<div id="allDishes"></div>
-									</div>
-=======
-
-	
-	<!-- ****************************************** VIEW 2 *************************************************************************** -->		
-				<div id="view23" style="display: none;">
-					<div class="col-md-3 col-sm-4" id="myDinnerView">
-						<p class="lead">My Dinner</p>    
-						<div class="col-md-12 col-sm-12 col-xs-5" id="guestNumberView">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<span class="col-md-5">Number of People:</span>
-									<span class="col-md-7">
-										<span class="col-md-8">
-											<!-- <input type="number" style="width:50px" id="numberOfGuests" min="0" max="100"></input> -->
-											<span id="numberOfGuests"></span>
-										</span>
-										<div class="pull-right">
-												<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-												<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+									<div class="col-md-3">
+										<div class="dropdown">
+											<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+											Select
+												<span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<li><a href="#">All Dish</a></li>
+											<li><a href="#">Starter</a></li>
+											<li><a href="#">Main Course</a></li>
+											<li><a href="#">Dessert</a></li>
+											</ul>
 										</div>
-									</span>
+									</div>
+									<div class="col-md-3">
+										<select class="selectpicker" id="typeSelector">
+										    <option value="starter" selected="selected">Starter</option>
+										    <option value="main dish">Main Dish</option>
+										    <option value="dessert">Dessert</option>
+										</select>
+									</div>
 								</div>
-							</div>
-						</div> <script>console.log("view23");</script>
-						<div class="col-md-12 col-sm-12 col-xs-7">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<table class="table">
-									<thead>
-										<tr>
-										  <th>Dish Name</th>
-										  <th>Cost</th>
-										</tr>
-									</thead>
-									<tbody id="myMenu">
-										<tr>
-										  <td>Pending</td>
-										  <td>0.00</td>
-										</tr>
-										<tr>
-										  <td>Total</td>
-										  <td></td>
-										</tr>
-									</tbody>
-									</table>		  
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 parapadding1">
-							<div class="btn-group">
-								<button class="btn btn-default" type="button" onclick="confirmDinner()">
-									Confirm Dinner
-								</button>
-							</div>
-						</div>
-					</div>
-<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ END OF VIEW 2 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
-<!-- ********************************************************** VIEW 3 ***************************************************************************** -->
-					<div class="col-md-9 col-sm-8" style="border-left: 2px solid #999">
-						<div class="panel panel-default" style="background-color: lightgray;">
-							<div class="panel-body">
 								<div class="col-md-12">
-									<p>Select Dish</p>
-									<div class="col-md-12">
-										<div class="col-md-3">
-											<div class="input-group">
-												<input type="text" class="form-control" placeholder="Search for...">
-												<span class="input-group-btn">
-												<button class="btn btn-default" type="button">Search</button>
-												</span>
-											</div>
-										</div>
-										<div class="col-md-3">
-											<div class="dropdown">
-												<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-												Select
-													<span class="caret"></span>
-												</button>
-												<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-												<li><a href="#">All Dish</a></li>
-												<li><a href="#">Starter</a></li>
-												<li><a href="#">Main Course</a></li>
-												<li><a href="#">Dessert</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="col-md-3">
-											<select class="selectpicker" id="typeSelector">
-											    <option value="starter" selected="selected">Starter</option>
-											    <option value="main dish">Main Dish</option>
-											    <option value="dessert">Dessert</option>
-											</select>
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="panel panel-default">
-											<div class="panel-body">
-												<h1> Dishes to be selected</h1>
-												<div id="selectDishView">
-													<h5>All Dishes: </h5><br/>
-													<div id="allDishes"></div>
-												</div>
+									<div class="panel panel-default">
+										<div class="panel-body">
+											<h1> Dishes to be selected</h1>
+											<div id="selectDishView">
+												<h5>All Dishes: </h5><br/>
+												<div id="allDishes"></div>
 											</div>
 										</div>
 									</div>
-			
->>>>>>> origin/master
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
 	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ END OF VIEW 3 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-				</div>  <!-- end of view2 and view3 div -->
+			</div>  <!-- end of view2 and view3 div -->
 			
 
 				
@@ -403,10 +301,6 @@
 			$('#view23').show();	
 		}
 		
-<<<<<<< HEAD
-		
-=======
->>>>>>> origin/master
 	</script>
 
     <!-- jQuery -->
@@ -422,13 +316,9 @@
     <script src="js/view/oneDishView.js"></script>
     <script src="js/view/prepareDishView.js"></script>
 	<script src="js/view/dinnerOverviewView.js"></script>
-<<<<<<< HEAD
 	<script src="js/controller/myDinnerController.js"></script>	
-=======
 	<script src="js/controller/myDinnerController.js"></script>
 	<script src="js/controller/selectDishController.js"></script>
 	<script src="js/controller/oneDishController.js"></script>
-
->>>>>>> origin/master
   </body>
 </html>
