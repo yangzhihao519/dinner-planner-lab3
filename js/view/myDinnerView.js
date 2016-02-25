@@ -35,12 +35,6 @@ var MyDinnerView = function(container, model){
 							"</tr>";
 
 			this.myMenu.html(myMenuHtml);
-			
-			$('.removeDish').click(function(){
-				console.log("click remove");
-				var id = $(this).attr("id");
-				model.removeDishFromMenu(id);
-			});
 
 		}else{
 			// do nothing..
