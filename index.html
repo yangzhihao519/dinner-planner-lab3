@@ -110,19 +110,19 @@
 								<p>Select Dish</p>
 								<div class="col-md-12">
 									<div class="col-md-3">
+										<select class="selectpicker btn btn-default" id="typeSelector">
+										    <option value="starter" selected="selected">Starter</option>
+										    <option value="main dish">Main Dish</option>
+										    <option value="dessert">Dessert</option>
+										</select>
+									</div>
+									<div class="col-md-3">
 										<div class="input-group">
 											<input type="text" class="form-control" id="searchInput" placeholder="Search for...">
 											<span class="input-group-btn">
 											<button class="btn btn-default" type="button" id="searchButton">Search</button>
 											</span>
 										</div>
-									</div>
-									<div class="col-md-3">
-										<select class="selectpicker btn btn-default" id="typeSelector">
-										    <option value="starter" selected="selected">Starter</option>
-										    <option value="main dish">Main Dish</option>
-										    <option value="dessert">Dessert</option>
-										</select>
 									</div>
 								</div>
 							</div>
@@ -169,7 +169,7 @@
 							<div class="col-md-4 col-sm-4 col-xs-4">
 								<button type="button" class="btn btn-default" id="confirmDishButton" onclick="selectDish()">Confirm dish</button>
 							</div>
-							<div class="col-md-1 col-md-offset-6 col-sm-1 col-sm-offset-5 col-xs-1 col-xs-offset-4">
+							<div class="col-md-1 col-md-offset-5 col-sm-1 col-sm-offset-4 col-xs-1 col-xs-offset-4">
 								<b>SEK </b>
 							</div>
 							<div class="col-md-1 col-sm-1 col-xs-1">

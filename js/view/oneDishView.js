@@ -41,10 +41,10 @@ var OneDishView = function (container, model) {
 												"<div class=\"col-md-2 col-sm-2 col-xs-2\">"+
 													oneDishAllIngredientsArray[key].unit+
 												"</div>"+
-												"<div class=\"col-md-6 col-sm-7 col-xs-6\">"+
+												"<div class=\"col-md-6 col-sm-6 col-xs-5\">"+
 												    oneDishAllIngredientsArray[key].name+
 												"</div>"+
-												"<div class=\"col-md-1 col-md-offset-2 col-sm-1 col-xs-1\">"+
+												"<div class=\"col-md-1 col-sm-1 col-xs-1\">"+
 													"SEK"+
 											    "</div>"+
 											    "<div class=\"col-md-1 col-sm-1 col-xs-1\">"+
