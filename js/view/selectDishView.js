@@ -28,12 +28,8 @@ var SelectDishView = function (container, model) {
     }
 
 	$("#allDishes").html(allDishesHtml);
-	this.displayedDish = $(".displayedDish");
-
-	this.displayedDish.click(function(){
-		console.log("click");
+	$(".displayedDish").click(function(){
 		var id = $(this).attr('id');
-		console.log("click: "+ id);
 		model.setSelectedDishId(id);
 	});
 
@@ -70,12 +66,5 @@ var SelectDishView = function (container, model) {
 	    }
 	    
 	    $("#allDishes").html(allDishesHtml);
-	    this.displayedDish = $(".displayedDish");
-	    this.displayedDish.click(function(){
-			console.log("click");
-			var id = $(this).attr('id');
-			console.log("click: "+ id);
-			model.setSelectedDishId(id);
-		});
 	}
 }
