@@ -28,14 +28,6 @@ var SelectDishView = function (container, model) {
     }
 
 	$("#allDishes").html(allDishesHtml);
-	this.displayedDish = $(".displayedDish");
-
-	this.displayedDish.click(function(){
-		console.log("click");
-		var id = $(this).attr('id');
-		console.log("click: "+ id);
-		model.setSelectedDishId(id);
-	});
 
 	this.update = function(args){
 		var type =  $('#typeSelector :selected').val();
@@ -70,12 +62,5 @@ var SelectDishView = function (container, model) {
 	    }
 	    
 	    $("#allDishes").html(allDishesHtml);
-	    this.displayedDish = $(".displayedDish");
-	    this.displayedDish.click(function(){
-			console.log("click");
-			var id = $(this).attr('id');
-			console.log("click: "+ id);
-			model.setSelectedDishId(id);
-		});
 	}
 }
