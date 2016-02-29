@@ -10,7 +10,8 @@
 	<script src="js/bootstrap.min.js"></script>
 	
 	<!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 
   </head>
@@ -47,8 +48,8 @@
 
 	
 	<!-- ****************************************** VIEW 2 *************************************************************************** -->		
-			<div id="view23" style="display: none;">
-				<div class="col-md-3 col-sm-4" id="myDinnerView">
+			<div id="view234">
+				<div class="col-md-3 col-sm-4" id="myDinnerView" style="display: none;">
 					<p class="lead">My Dinner</p>    
 					<div class="col-md-12 col-sm-12 col-xs-5" id="guestNumberView">
 						<div class="panel panel-default">
@@ -99,10 +100,10 @@
 						</div>
 					</div>
 				</div>
-<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ END OF VIEW 2 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+                <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ END OF VIEW 2 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
-<!-- ********************************************************** VIEW 3 ***************************************************************************** -->
-				<div class="col-md-9 col-sm-8" style="border-left: 2px solid #999" id="selectDishView">
+                <!-- ********************************************************** VIEW 3 ***************************************************************************** -->
+				<div class="col-md-9 col-sm-8" style="border-left: 2px solid #999; display: none;" id="selectDishView">
 					<div class="panel panel-default" style="background-color: lightgray;">
 						<div class="panel-body">
 							<div class="col-md-12">
@@ -139,49 +140,47 @@
 						</div>
 					</div>
 				</div>
-	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ END OF VIEW 3 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-			</div>  <!-- end of view2 and view3 div -->
-			
+	            <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ END OF VIEW 3 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
-				
-	<!-- *********************************************************** VIEW 4 ***************************************************************************** -->
-			<div id="oneDishView" style="display: none;">	
-				<div class="col-md-6 col-sm-6 col-xs-12">
-					<div class="col-md-12 col-sm-12 col-xs-12 parapadding1">
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<div class="col-xs-12"><h2 id="oneDishName"></h2></div>
-								<div class="col-xs-12" id="oneDishImage"></div>
-								<div class="col-xs-12" id="oneDishDescription"></div>
+		        <!-- *********************************************************** VIEW 4 ***************************************************************************** -->
+				<div class="col-md-9 col-sm-8" style="border-left: 2px solid #999; display: none;" id="oneDishView">	
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="col-md-12 col-sm-12 col-xs-12 parapadding1">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="col-xs-12"><h2 id="oneDishName"></h2></div>
+									<div class="col-xs-12" id="oneDishImage"></div>
+									<div class="col-xs-12" id="oneDishDescription"></div>
+								</div>
+							</div>
+							<button type="button" class="btn btn-primary" onclick="selectDish()">Back to select dish</button>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-6 col-xs-12 parapadding" style="background-color: rgb(254,228,157);">
+						<div>
+							<h3>Ingredients for <span id="oneDishNumberOfGuests"></span> people</h3>
+						</div>
+						<hr/>
+						<div id="oneDishAllIngredients">
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<hr/>
+							<div class="col-md-4 col-sm-4 col-xs-4">
+								<button type="button" class="btn btn-default" id="confirmDishButton" onclick="selectDish()">Confirm dish</button>
+							</div>
+							<div class="col-md-1 col-md-offset-6 col-sm-1 col-sm-offset-5 col-xs-1 col-xs-offset-4">
+								<b>SEK </b>
+							</div>
+							<div class="col-md-1 col-sm-1 col-xs-1">
+								<b><p id="oneDishTotalPrice"></p></b>
 							</div>
 						</div>
-						<button type="button" class="btn btn-primary" onclick="selectDish()">Back to select dish</button>
 					</div>
-				</div>
-
-				<div class="col-md-6 col-sm-6 col-xs-12 parapadding" style="background-color: rgb(254,228,157);">
-					<div>
-						<h3>Ingredients for <span id="oneDishNumberOfGuests"></span> people</h3>
-					</div>
-					<hr/>
-					<div id="oneDishAllIngredients">
-					</div>
-					<div class="col-md-12 col-sm-12 col-xs-12">
-						<hr/>
-						<div class="col-md-4 col-sm-4 col-xs-4">
-							<button type="button" class="btn btn-default" id="confirmDishButton" onclick="selectDish()">Confirm dish</button>
-						</div>
-						<div class="col-md-1 col-md-offset-6 col-sm-1 col-sm-offset-5 col-xs-1 col-xs-offset-4">
-							<b>SEK </b>
-						</div>
-						<div class="col-md-1 col-sm-1 col-xs-1">
-							<b><p id="oneDishTotalPrice"></p></b>
-						</div>
-					</div>
-				</div>
-			</div> 
-<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ END OF VIEW 4 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
+				</div> 
+	            <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ END OF VIEW 4 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+			</div>  <!-- end of view2,view3 and view4 div -->
+			
 
 <!-- *********************************************************** VIEW 5 ***************************************************************************** -->
 			<div id="dinnerOverviewView" style="display: none;">
@@ -253,39 +252,41 @@
 	</div>	<!-- end of container -->
 	
 	<script>
-		function DinnerMenu()    // view1 to view2-3
+		function DinnerMenu()    // view1 to view2+3
 		{
 			$('#landing').hide();
-			$('#view23').show();
-			//$('#landingDiv').css('display','none');
+			$('#myDinnerView').show();
+			$('#selectDishView').show();
 		}
 		
-		function confirmDinner()   // view2 to view5
+		function selectedDishDetails()   // view2+3 to view4
 		{
-			$('#view23').hide();
-			$('#dinnerOverviewView').show();
-		}
-		
-		function selectedDishDetails()   // view2 to view4
-		{
-			$('#view23').hide();
+			$('#selectDishView').hide();
 			$('#oneDishView').show();
+		}
+
+		function selectDish()    // view 4 to view 2+3
+		{
+			$('#oneDishView').hide();
+			$('#dinnerOverviewView').hide();
+			$('#prepareDishView').hide();
+			$('#myDinnerView').show();
+			$('#selectDishView').show();	
+		}
+
+		function confirmDinner()   // view2+3/4 to view5
+		{
+			$('#myDinnerView').hide();
+			$('#selectDishView').hide();
+			$('#oneDishView').hide();
+			$('#dinnerOverviewView').show();
 		}
 		
 		function fullRecipe()    // view5 to view6
 		{
 			$('#dinnerOverviewView').hide();
 			$('#prepareDishView').show();
-		}
-				
-		function selectDish()
-		{
-			$('#oneDishView').hide();
-			$('#dinnerOverviewView').hide();
-			$('#prepareDishView').hide();
-			$('#view23').show();	
-		}
-		
+		}			
 	</script>
 
     <!-- jQuery -->
