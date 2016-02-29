@@ -1,20 +1,21 @@
 //SelectDishView Object constructor
 var SelectDishController = function (view, model) {
+    setSelectedDishId(model);
+
 	$("#typeSelector").change(function() {
 	    view.update("selectType");
-
-	    $(".displayedDish").click(function(){
-			var id = $(this).attr('id');
-			model.setSelectedDishId(id);
-		});
+	    setSelectedDishId(model);
 	});
 
 	view.searchButton.click(function(){
 	    view.update("searchDish");
+	    setSelectedDishId(model);
+	});
+}
 
-	    $(".displayedDish").click(function(){
+function setSelectedDishId(model){
+	$(".displayedDish").click(function(){
 			var id = $(this).attr('id');
 			model.setSelectedDishId(id);
-		});
 	});
 }

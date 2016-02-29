@@ -22,7 +22,6 @@ var DinnerModel = function() {
 		}
 	}
 
-
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2
 		console.log("set~ "+ num);

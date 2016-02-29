@@ -28,10 +28,6 @@ var SelectDishView = function (container, model) {
     }
 
 	$("#allDishes").html(allDishesHtml);
-	$(".displayedDish").click(function(){
-		var id = $(this).attr('id');
-		model.setSelectedDishId(id);
-	});
 
 	this.update = function(args){
 		var type =  $('#typeSelector :selected').val();
